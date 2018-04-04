@@ -15,7 +15,7 @@ export class AppComponent {
   }
 
   sendMessage() {
-    alert(this.txtMessage);
+    this.socket.emit('CLIENT_SEND_MESSAGE', this.txtMessage);
     this.txtMessage = '';
   }
 }
