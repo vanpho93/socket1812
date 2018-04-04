@@ -8,7 +8,14 @@ import * as io from 'socket.io-client';
 })
 
 export class AppComponent {
+  txtMessage = '';
+  socket: any;
   constructor() {
-    const socket = io('http://localhost:3000');
+    this.socket = io('http://localhost:3000');
+  }
+
+  sendMessage() {
+    alert(this.txtMessage);
+    this.txtMessage = '';
   }
 }

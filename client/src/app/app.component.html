@@ -1,3 +1,13 @@
 <div class="container">
-  <h3>User</h3>
+  <h3>Khoa Pham Chat</h3>
+  <div class="form-inline">
+    <input
+      class="form-control"
+      placeholder="Enter your message"
+      [(ngModel)]="txtMessage"  
+    >
+    <button class="btn btn-success" (click)="sendMessage();">
+      Send
+    </button>
+  </div>
 </div>
