@@ -1,13 +1,18 @@
 <div class="container">
   <h3>Khoa Pham Chat</h3>
-  <div class="form-inline">
+  <div class="form-group" style="width: 200px">
     <input
       class="form-control"
       placeholder="Enter your message"
       [(ngModel)]="txtMessage"  
     >
-    <button class="btn btn-success" (click)="sendMessage();">
+    <br>
+    <button class="btn btn-success form-control" (click)="sendMessage();">
       Send
     </button>
   </div>
+  <h3>Conversation</h3>
+  <p *ngFor="let message of messages" class="text-info">
+    {{ message }}
+  </p>
 </div>
